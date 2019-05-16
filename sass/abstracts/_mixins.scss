@@ -5,3 +5,37 @@
     clear: both;
   }
 }
+
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin respond($breakpoint) {
+  @if ($breakpoint == phone) {
+    // 600px
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+  @if ($breakpoint == tabPort) {
+    // 900px
+    @media (max-width: 56.25em) {
+      @content;
+    }
+  }
+  @if ($breakpoint == tabLand) {
+    // 1200px
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
+  @if ($breakpoint == bigDesktop) {
+    // 1800px
+    @media (min-width: 112.5em) {
+      @content;
+    }
+  }
+}
