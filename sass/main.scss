@@ -1,10 +1,11 @@
-@import 'base/animations';
-@import 'base/typography';
-@import 'base/utilities';
-@import 'pages/home';
 @import 'abstracts/functions';
 @import 'abstracts/mixins';
 @import 'abstracts/variables';
+@import 'base/animations';
+@import 'base/typography';
+@import 'base/utilities';
+@import 'base/base';
+@import 'pages/home';
 @import 'components/button';
 @import 'components/composition';
 @import 'components/feature-box';
@@ -13,25 +14,3 @@
 @import 'components/bg-video';
 @import 'layout/header';
 @import 'layout/grid';
-
-*,
-*:after,
-*:before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 62.5%; // 1 rem = 10px; 10/16 = 62.5%
-
-  @include respond(tabLand) {
-    font-size: 56.25%; // 1 rem = 9px; 9/16 = 56.25%
-  }
-  @include respond(tabPort) {
-    font-size: 50%; // 1 rem = 8px; 8/16 = 50%;
-  }
-  @include respond(bigDesktop) {
-    font-size: 75%; // 1 rem = 12p; 12/16 = 75%
-  }
-}
